@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 查看文档
+    url: https://github.com/arbaleast/dayu-tt-enclosure#readme
+    about: 请先查看项目文档，可能已有答案
+  - name: 讨论区
+    url: https://github.com/arbaleast/dayu-tt-enclosure/discussions
+    about: 一般性问题请使用讨论区
