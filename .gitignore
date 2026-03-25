@@ -36,3 +36,4 @@ freecad.lock
 *.swp
 *.swo
 *~
+enclosure/freecad/scripts/__pycache__/
