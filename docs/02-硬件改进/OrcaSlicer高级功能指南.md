@@ -201,6 +201,12 @@ shaper_freq_y: 40
 
 ## 十、OrcaSlicer AI vs Bambu Lab P2S AI（X/Twitter 2026讨论）
 
+### ZELIA — 仅需10张图的AI缺陷检测训练
+- **来源：** Zetamotion，2026年AI质检助手
+- **核心优势**：只需10张缺陷图片，即可训练出可用的检测模型
+- **原理**：生成合成缺陷数据集（含mask）→ 人工验证 → 训练
+- **参考价值**：大鱼TT + OrcaSlicer 可借鉴此思路，用少量真实缺陷样本训练检测模型
+
 > 来源：X/Twitter 社区，Bambu Lab P2S 发布讨论（2026年3月）
 
 | 功能 | OrcaSlicer + Obico | Bambu Lab P2S（闭源） |

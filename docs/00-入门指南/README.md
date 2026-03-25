@@ -142,7 +142,7 @@
 
 | 日期 | 更新内容 |
 |------|----------|
-| 2026-03-25 | 新增：腔体温控指南、OrcaSlicer v2.3.1 AI检测、Cartographer 3D传感器、故障排查手册、热端对比（Revo/Dragon HF/DiamondBack）、Z轴抗锯齿、Voron现代改装路线、B站改装参考视频表、X/Twitter 2026热点（Bambu P2S/H2S/DiamondBack、封箱成功率数据、拖链痛点、门把手温湿度计一体化）、LED灯带+Klipper LED Effects、Z轴光电限位改装、思兼Klipper教程链接、拓竹速度参数移植 |
+| 2026-03-25 | 新增：腔体温控指南、OrcaSlicer v2.3.1 AI检测、Cartographer 3D传感器、故障排查手册、热端对比（Revo/Dragon HF/DiamondBack）、Z轴抗锯齿、Voron现代改装路线、B站改装参考视频表、X/Twitter 2026热点（Bambu P2S/H2S/DiamondBack、封箱成功率数据、拖链痛点、门把手温湿度计一体化）、LED灯带+Klipper LED Effects、Z轴光电限位改装、思兼Klipper教程链接、拓竹速度参数移植、AI 3D建模工具对比（Meshy 97%通过率、Hyper3D Rodin Gen-2 BANG分件、ZELIA 10张图缺陷检测） |
 | 2026-03-21 | 初始版本，整理基础资料 |
 
 ---
