@@ -4,20 +4,70 @@
 
 ---
 
-## 📁 文件夹结构
+## 📁 文档结构
+
+### 00-入门指南 / Getting Started
+| 文件 | 内容 |
+|------|------|
+| **README.md** | 本文件，项目总览 |
+| **大鱼TT从零DIY完全指南.md** | 完整装机教程 |
+| **1-硬件升级方案.md** | 挤出机、调平系统、主板、热床、冷却、框架等 |
+| **2-软件固件配置.md** | Klipper固件配置、Klicky探针、切片软件参数 |
+| **3-配件清单与预算.md** | 配件列表、参考价格、采购渠道 |
+| **4-安装指南索引.md** | 各改装项目的安装步骤和常见问题 |
+| **5-参考资料.md** | GitHub链接、视频教程、社区资源 |
+
+### 01-封箱方案 / Enclosure
+| 文件 | 内容 |
+|------|------|
+| **官方方案.md** | 大鱼DIY官方封箱视频+资料 |
+| **开源文件资源.md** | 社区开源封箱文件汇总 |
+| **完整物料清单.csv** | BOM表格（可直接下载） |
+| **方案对比可视化.md** | 各方案优缺点对比 |
+| **皮带张紧器设计.md** | 皮带张紧STL模型 |
+| **42闭环电机/** | 42闭环步进电机改装实战 |
+
+### 02-硬件改进 / Hardware Upgrades
+| 文件 | 内容 |
+|------|------|
+| **硬件改进资料汇总.md** | 所有改装方案索引 + 搜索来源 |
+| **腔体温控与封箱散热指南.md** | 🆕 2026最新：封箱数据+温控+Nevermore |
+| **OrcaSlicer高级功能指南.md** | 🆕 OrcaSlicer v2.3.1 AI检测+Obico |
+| **Cartographer3D传感器改装指南.md** | 🆕 探针+隔振二合一 |
+| **故障排查与维护手册.md** | 🆕 日常维护+常见问题+拖链痛点 |
+| **CAN总线改装指南.md** | FLY SB2040 CAN总线改装 |
+| **Klipper固件配置完全指南.md** | Klipper配置详解 |
+| **封箱散热BOSSAC热床改装指南.md** | BOSSAC热床改装 |
+| **多色打印改装完全指南.md** | AMS多色改装方案 |
+| **罗技C270-大鱼TT摄像头完整配置.md** | 远程监控配置 |
+| **摄像头加装指南.md** | 摄像头安装教程 |
+| **42闭环电机改装实战采购指南.md** | 42闭环电机BOM |
+
+### ⬆️ 封箱 FreeCAD 设计项目
+> 位置：`enclosure/`（与 `docs/` 同级）
+> ⚠️ 310mm 尺寸**未经官方验证**，先设计后验证
+> 🔄 antfarm workflow 驱动中（底部支架 US-003 进行中）
 
 | 文件 | 内容 |
 |------|------|
-| **1-硬件升级方案.md** | 挤出机、调平系统、主板、热床、冷却、框架等硬件改装方案 |
-| **2-软件固件配置.md** | Klipper固件配置、Klicky探针设置、切片软件参数等 |
-| **3-配件清单与预算.md** | 详细的配件列表、参考价格、采购渠道、预算规划 |
-| **4-安装指南索引.md** | 各改装项目的安装步骤、关键要点、常见问题 |
-| **5-参考资料.md** | GitHub链接、视频教程、社区资源、FAQ |
-| **故障排查与维护手册.md** | 🆕 日常维护、常见问题、紧急处理 |
+| **enclosure/README.md** | 封箱设计项目总览 |
+| **enclosure/plan.md** | 设计计划+尺寸规格 |
+| **enclosure/dimensions.md** | 310mm 框架尺寸数据 |
+| **enclosure/docs/bottom-bracket-design.md** | US-003 底部支架设计规格 |
+| **enclosure/freecad/Assembly.FCStd** | FreeCAD 主装配 |
 
 ---
 
 ## 🚀 快速开始
+
+### 🆕 正在开发：大鱼TT 310 封箱 FreeCAD 设计
+> **位置**：[enclosure/README.md](../enclosure/README.md)（项目根目录）
+> **状态**：⚠️ 310mm 尺寸**未经官方验证**，先设计后实物测试
+> **进度**：antfarm workflow 驱动，底部支架设计（US-003）进行中
+>
+> 包含：510×490×760mm 外形设计、FreeCAD 参数化模型、激光切割图纸
+
+---
 
 ### 推荐改装顺序
 
@@ -69,10 +119,10 @@
 
 ## 🔗 常用链接
 
-- **GitHub 扩展项目**: https://github.com/xiehuangpeng/bigfish-tt-extentions
+- **GitHub 扩展项目**: https://github.com/rushairer/bigfish-tt-extentions
 - **Klicky 探针**: https://github.com/jlas1/Klicky-Probe
 - **Klipper 固件**: https://www.klipper3d.org/
-- **KIAUH 安装助手**: https://github.com/th33xitus/kiauh
+- **KIAUH 安装助手**: https://github.com/dw-0/kiauh
 
 更多资源请参考 [5-参考资料.md](./5-参考资料.md)
 
