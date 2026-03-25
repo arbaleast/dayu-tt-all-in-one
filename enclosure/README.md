@@ -7,6 +7,16 @@
 
 This project designs a full enclosure for the **Dayu TT310** 3D printer (print volume 310×310×310mm).
 
+## ⚠️ 重要警告 / Important Warning
+
+> **310mm 尺寸封箱尚未经过实机验证！**
+>
+> 官方 UP主 大鱼DIY 在 B站视频（[BV1pe41117h2](https://www.bilibili.com/video/BV1pe41117h2/)）中明确说明：
+> "我做的是 **235尺寸** 的封箱，310尺寸的**并没有实机验证过**，如有问题，麻烦大佬们反馈给我"
+>
+> 本项目的封箱设计目标是 **310mm 尺寸**，属于**先行开发、待验证**阶段。
+> 在实际打印和测试前，所有尺寸仅供参考。
+
 ### 主要组件 / Major Components
 
 1. **顶部封板** - 配合风机散热孔或风扇位
@@ -75,10 +85,21 @@ enclosure/
 
 ## 参考资料 / References
 
-- B站开源235尺寸封箱: https://www.bilibili.com/video/BV1pe41117h2/
-- Gitee TT310增高封箱: https://gitee.com/sk66666/TT310zenggaofengxiang
+- [BV1pe41117h2](https://www.bilibili.com/video/BV1pe41117h2/) — B站官方235尺寸封箱（**唯一有实物的参考**，310尺寸未经官方验证⚠️）
+- [Gitee TT310zenggaofengxiang](https://gitee.com/sk66666/TT310zenggaofengxiang) — 310增高封箱开源文件（第三方参考）
+- [BV1bdqzYbEVg](https://www.bilibili.com/video/BV1bdqzYbEVg/) — 大鱼DIY官方回应"大鱼TT还值得一玩吗"
+
+## 验证清单 / Validation Checklist
+
+- [ ] 310 框架实际尺寸测量（框架宽度/深度/高度）
+- [ ] 底部支架与调整脚配合间隙确认
+- [ ] 侧板与框架固定夹位置匹配
+- [ ] 门板铰链安装位偏差
+- [ ] 顶部风扇位与 Z 轴碰撞检查
+- [ ] 实际装配后腔体温升测试
 
 ## 更新日志 / Changelog
 
+- 2026-03-25: 添加310mm验证警告、235 vs 310差异对比表、验证清单
 - 2026-03-24: US-001 完成，尺寸研究和布局规划
 - 2026-03-24: US-002 完成，FreeCAD 项目初始化
