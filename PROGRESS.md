@@ -7,13 +7,13 @@
 
 | Story | 内容 | 状态 |
 |-------|------|------|
-| US-004 | 顶部风扇安装罩 | ⏳ |
-| US-005 | 密封条安装槽与门框加强件 | ⏳ |
-| US-006 | 面板DXF切割图 | ⏳ |
-| US-007 | BOM物料清单 | ⏳ |
-| US-008 | 装配说明书 | ⏳ |
-| US-009 | Klipper温控风扇配置 | ⏳ |
-| US-010 | STL可打印性验证 | ⏳ |
+| US-004 ✅ | 顶部风扇安装罩 | ✅ | TopFanMount.FCStd |
+| US-005 ✅ | 密封条安装槽与门框加强件 | ✅ | DoorFrameReinforcement.FCStd |
+| US-006 ✅ | 面板DXF切割图 | ✅ | dxf/*.dxf |
+| US-007 ✅ | BOM物料清单 | ✅ | BOM.md |
+| US-008 ✅ | 装配说明书 | ✅ | ASSEMBLY.md |
+| US-009 ✅ | Klipper温控风扇配置 | ✅ | klipper-fan-config.md |
+| US-010 🔶 | STL可打印性验证 | 🔶 | 待切片验证 |
 
 ## US-003 底部支架 & 脚垫 (Bottom Bracket & Feet)
 
