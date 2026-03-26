@@ -1,0 +1,172 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1009
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+LAYER
+ 70
+3
+  0
+LAYER
+  2
+CUT
+ 70
+0
+ 62
+1
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+SCORE
+ 70
+0
+ 62
+3
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+TEXT
+ 70
+0
+ 62
+7
+  6
+CONTINUOUS
+  0
+LAYER
+  2
+ORIGIN
+ 70
+0
+ 62
+4
+  6
+CONTINUOUS
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LINE
+  8
+CUT
+ 10
+0.000
+ 20
+0.000
+ 30
+0.0
+ 11
+80.000
+ 21
+0.000
+ 31
+0.0
+  0
+LINE
+  8
+CUT
+ 10
+80.000
+ 20
+0.000
+ 30
+0.0
+ 11
+80.000
+ 21
+30.000
+ 31
+0.0
+  0
+LINE
+  8
+CUT
+ 10
+80.000
+ 20
+30.000
+ 30
+0.0
+ 11
+0.000
+ 21
+30.000
+ 31
+0.0
+  0
+LINE
+  8
+CUT
+ 10
+0.000
+ 20
+30.000
+ 30
+0.0
+ 11
+0.000
+ 21
+0.000
+ 31
+0.0
+  0
+CIRCLE
+  8
+CUT
+ 10
+12.000
+ 20
+15.000
+ 30
+0.0
+ 40
+1.750
+  0
+CIRCLE
+  8
+CUT
+ 10
+68.000
+ 20
+15.000
+ 30
+0.0
+ 40
+1.750
+  0
+TEXT
+  8
+TEXT
+ 10
+5.000
+ 20
+35.000
+ 30
+0.0
+ 40
+3.000
+  1
+DOOR_HANDLE
+  0
+ENDSEC
+  0
+EOF
