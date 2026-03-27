@@ -1,124 +1,111 @@
-# 🐟 大鱼TT 全能资料库
+# 🐟 大鱼TT 310mm 封箱改装方案
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/arbaleast/dayu-tt-all-in-one)
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![分支](https://img.shields.io/badge/分支-enclosure%2Ftt310--full--enclosure-orange?logo=git)](https://github.com/arbaleast/dayu-tt-enclosure)
+[![状态](https://img.shields.io/badge/状态-V2%20%E5%B7%A5%E7%A8%8B%E5%AE%8C%E6%88%90-brightgreen)](https://github.com/arbaleast/dayu-tt-enclosure)
+[![工程分析](https://img.shields.io/badge/Engineering-V2%E7%BB%93%E6%9E%84%2B%E7%83%AD%E5%8A%9B%E5%88%86%E6%9E%90%E5%AE%8C%E6%88%90-blue)](https://github.com/arbaleast/dayu-tt-enclosure)
 
-> 大鱼TT 310mm 封箱改装完整解决方案 — 含设计文件、装配指南、BOM物料清单、AI校准配置
-
----
-
-## 📋 目录
-
-- [项目结构](#项目结构)
-- [快速导航](#快速导航)
-- [最新进度](#最新进度)
-- [文件说明](#文件说明)
-- [参与贡献](#参与贡献)
+> 大鱼TT（TT310）封箱改装完整解决方案 — 含 V2 参数化设计、工程分析、可打印 STL、DXF 切割图、装配指南
 
 ---
 
-## 项目结构
+## 核心产出物
+
+| 类型 | 数量 | 路径 |
+|------|------|------|
+| **3D 打印件 STL** | 8 个（V2） | `enclosure/stl_v2/` |
+| **DXF 切割图** | 7 张（V2） | `enclosure/dxf_v2/` |
+| **FreeCAD 源文件** | 14 个 | `enclosure/freecad/` |
+| **物料清单 BOM** | 含成本估算 | `enclosure/BOM.md` |
+| **装配指南** | 10 步 | `enclosure/ASSEMBLY.md` |
+| **AI 校准配置** | 含 OrcaSlicer | `docs/02-硬件改进/` |
+
+---
+
+## 🚀 快速导航
+
+**新人入门**
+1. [`大鱼TT从零DIY完全指南.md`](docs/00-入门指南/大鱼TT从零DIY完全指南.md) — 全流程概览
+2. [`配件清单与预算.md`](docs/00-入门指南/3-配件清单与预算.md) — 要买什么
+
+**封箱改装（核心）**
+3. [`BOM.md`](enclosure/BOM.md) — V2 物料清单 + 成本
+4. [`ASSEMBLY.md`](enclosure/ASSEMBLY.md) — 10 步装配
+5. `enclosure/stl_v2/` — 8 个可直接打印的 STL
+6. `enclosure/dxf_v2/` — 7 张激光/CNC 切割图
+
+**AI 校准（特色）**
+7. [`AI校准进化实战指南.md`](docs/02-硬件改进/AI校准进化实战指南.md) — OrcaSlicer + PrintGuard + Obico
+8. [`OrcaSlicer高级功能指南.md`](docs/02-硬件改进/OrcaSlicer高级功能指南.md) — Input Shaping / PA 校准
+
+**改装进阶**
+9. [`腔体温控与封箱散热指南.md`](docs/02-硬件改进/腔体温控与封箱散热指南.md) — 热管理
+10. [`故障排查与维护手册.md`](docs/02-硬件改进/故障排查与维护手册.md)
+
+---
+
+## V2 重新设计亮点（2026-03-26）
+
+### 🔧 结构工程分析结论
+- **底部支架**：104x 安全系数，强度远超需求
+- **侧板加厚**：3mm → **4mm**（3mm 在风扇抽风 ΔP=50Pa 下挠度 6mm，不合格）
+- **门板**：5mm 加固，挠度仅 1.3mm，够用
+
+### 🌡️ 热力分析结论
+| 散热方式 | 腔温 | 适用材料 |
+|---------|------|---------|
+| 自然对流（无风扇）| ~46°C | ⚠️ PLA 禁用 |
+| **强制排风 120mm** | **~27°C** | ✅ 所有材料适合 |
+
+> 🔥 **结论：强制排风是必须的**，无风扇腔温接近 PLA 软化点（55°C）
+
+### 参数化生成
+所有 STL / DXF 均由 Python 脚本生成，可按实际机型微调：
+```
+scripts/redesign_v2/
+├── stl_writer.py      ← STL 参数化生成
+├── dxf_writer.py      ← DXF 切割图生成
+└── analysis_v2.py     ← 工程分析脚本
+```
+
+---
+
+## 大鱼TT 基本规格
+
+| 项目 | TT150 | TT310 |
+|------|-------|-------|
+| 打印尺寸 | 150×150×150mm | **310×310×310mm** |
+| 框架 | 2020 铝型材 | 2020/2040 铝型材 |
+| 固件 | Klipper / Marlin | Klipper / Marlin |
+| 定位 | 开源 DIY | 开源 DIY · 高改装潜力 |
+
+---
+
+## 目录结构
 
 ```
-dayu-tt-all-in-one/
-├── docs/                          # 文档中心
-│   ├── 00-入门指南/               # 新手必读
-│   ├── 01-封箱方案/               # 封箱改装方案
-│   ├── 02-硬件改进/               # AI校准、改装指南 🆕
-│   ├── 03-改装实战/               # 改装步骤与实录
-│   ├── 04-参考资料/               # 社区资源汇总
-│   └── 99-项目维护/               # GitHub同步、SSH配置
-├── enclosure/                      # 封箱310专项（核心产出）
-│   ├── stl/                       # 14个可打印STL文件
-│   ├── dxf/                       # 6张切割图（激光/CNC）
-│   ├── freecad/                   # FreeCAD源文件
-│   ├── steps/                     # 装配步骤文件
-│   ├── ASSEMBLY.md                # 10步装配指南
-│   ├── BOM.md                     # 完整物料清单
-│   ├── dimensions.md              # 尺寸规格
-│   ├── layout.txt                 # 布局说明
-│   ├── plan.md                    # 改装计划
-│   └── README.md                  # 封箱子项目说明
-├── archive/                        # 历史迁移记录
-├── images/                        # 参考图片
-├── models/                        # 3D模型预览
-├── scripts/                        # 自动化脚本
-├── CHANGELOG.enclosure.md          # 更新日志
-├── PROGRESS.md                    # 封箱进度追踪
-└── README.md                      # 本文件
+docs/
+├── 00-入门指南/        ← 新手必读
+├── 01-封箱方案/        ← 方案对比与选型
+├── 02-硬件改进/        ← AI校准、改装指南
+├── 03-功能扩展/        ← 温控、摄像头等
+└── 04-参考资料/        ← 社区资源
+
+enclosure/             ← 封箱核心产出
+├── stl_v2/            ← V2 可打印件（8个）
+├── dxf_v2/            ← V2 切割图（7张）
+├── freecad/           ← FreeCAD 源文件
+├── BOM.md             ← 物料清单
+├── ASSEMBLY.md        ← 装配指南
+└── REDESIGN_V2.md     ← V2 设计文档
 ```
 
 ---
 
-## 快速导航
+## 状态
 
-### 🔰 新手入门
-1. **改装全貌** → [`docs/00-入门指南/大鱼TT从零DIY完全指南.md`](docs/00-入门指南/大鱼TT从零DIY完全指南.md)
-2. **预算清单** → [`docs/00-入门指南/3-配件清单与预算.md`](docs/00-入门指南/3-配件清单与预算.md)
-
-### 📦 封箱改装
-3. **封箱方案对比** → [`docs/01-封箱方案/方案对比可视化.md`](docs/01-封箱方案/方案对比可视化.md)
-4. **物料清单** → [`enclosure/BOM.md`](enclosure/BOM.md)
-5. **装配指南** → [`enclosure/ASSEMBLY.md`](enclosure/ASSEMBLY.md)
-6. **STL可打印文件** → [`enclosure/stl/`](enclosure/stl/)
-7. **DXF切割图** → [`enclosure/dxf/`](enclosure/dxf/)
-
-### ⚡ AI校准（2026新增）
-8. **AI校准实战** → [`docs/02-硬件改进/AI校准进化实战指南.md`](docs/02-硬件改进/AI校准进化实战指南.md)
-9. **OrcaSlicer配置** → [`docs/02-硬件改进/OrcaSlicer高级功能指南.md`](docs/02-硬件改进/OrcaSlicer高级功能指南.md)
+**V2 设计** → ✅ 结构/热力分析完成
+**待做** → 实物验证（打印 STL → 发工厂切亚克力 → 装配）
 
 ---
 
-## 最新进度
-
-**封箱改装：** US-003~010 全部完成 ✅  
-**待验证：** US-003-09 底部支架配合验证（需TT310实机）
-
-详细进度 → [`PROGRESS.md`](PROGRESS.md)
-
----
-
-## 文件说明
-
-### enclosure/ — 封箱专项文件
-
-| 文件/目录 | 内容 |
-|---------|------|
-| `stl/` | 14个3D打印零件（底部支架、风扇罩、门板配件等）|
-| `dxf/` | 6张激光/CNC切割图（底板、侧板、门板等）|
-| `freecad/` | FreeCAD源文件（含装配体）|
-| `BOM.md` | 完整物料清单（Markdown，含成本估算）|
-| `ASSEMBLY.md` | 10步装配指南 |
-| `dimensions.md` | 封箱尺寸规格 |
-
-### docs/02-硬件改进/ — AI校准与改装
-
-| 文件 | 内容 |
-|------|------|
-| `AI校准进化实战指南.md` | OrcaSlicer + PrintGuard + Obico 组合配置 |
-| `OrcaSlicer高级功能指南.md` | PA校准、Input Shaping、VFA分析 |
-| `故障排查与维护手册.md` | 常见问题处理 |
-| `腔体温控与封箱散热指南.md` | 封箱后温控配置 |
-
----
-
-## 大鱼TT 简介
-
-| 项目 | 内容 |
-|------|------|
-| **结构** | CoreXY |
-| **打印尺寸** | 235×235×250mm / 310×310×310mm |
-| **框架** | 2020/2040 铝型材 |
-| **固件** | Klipper / Marlin |
-| **定位** | 开源 DIY · 高性价比 · 改装潜力大 |
-
----
-
-## 参与贡献
-
-- 提交 Issue / PR → [GitHub](https://github.com/arbaleast/dayu-tt-all-in-one)
-- 资料补充 → 提交到对应 `docs/` 目录
-- STL/模型 → 放入 `enclosure/stl/` 或 `models/`
-- 图片 → 放入 `images/`
-
-> 项目持续更新，欢迎 Star ⭐
+*有问题或建议 → [GitHub Issues](https://github.com/arbaleast/dayu-tt-enclosure/issues)*
