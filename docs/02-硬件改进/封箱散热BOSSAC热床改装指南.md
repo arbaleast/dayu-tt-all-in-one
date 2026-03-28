@@ -264,6 +264,6 @@ gcode:
 
 | 项目 | 说明 |
 |------|------|
-| 大鱼TT dayu-tt-enclosure | 已归档，内容合并到本项目 |
+| 大鱼TT dayu-tt-all-in-one | 已归档，内容合并到本项目 |
 | 立创开源广场 | 搜索"大鱼TT"有封箱资料 |
 | MakerWorld | 大鱼TT 改装件 |
