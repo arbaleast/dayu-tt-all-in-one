@@ -1,0 +1,20 @@
+# Virtual environments
+.venv/
+venv/
+
+# Local databases
+.chromadb/
+.rag_index/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
