@@ -18,4 +18,40 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 .worktrees
+
+# FreeCAD
+*.FCParam
+*.FCMacro
+*.FCStd
+*.FCStd1
+*.FCStdBak
+*.FCStd1Bak
+freecad.lock
+
+# OpenSCAD
+*.csg
+*.back
+
+# Slicer output (don't commit gcode)
+*.gcode
+*.gco
+*.g
+
+# 3D printing temp
+*.3mf
+*.amf
+
+# Images/renders (large)
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.stl.bak
+
+# OS
+*.swp
+*.swo
+*~
+enclosure/freecad/scripts/__pycache__/
